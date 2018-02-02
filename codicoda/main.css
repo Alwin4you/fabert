@@ -1,0 +1,13 @@
+h1 {
+	font-family: 'Comic Sans MS', cursive;
+	text-align : center;
+	text-decoration: underline;
+	font-style: italic;
+}
+img {
+	margin-left : 35%;
+	margin-top : 8%;
+}
+body {
+	background-color:#E6E6FA
+}
