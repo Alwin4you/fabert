@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="demo1 no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Most of the time, highly detailed panoramic photos are skewed down so that they fit the website layout, making it impossible to enjoy the photo" />
+		<meta name="keywords" content="jquery viewer, jquery panorama viewer, javascript panorama viewer" />
+		<meta name="author" content="Author for Onextrapixel" />
+		<link rel="shortcut icon" id="favicon" href="../file/favicon.gif">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<!-- Edit Below -->
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	    <script type="text/javascript" src="js/jquery.panorama_viewer.js"></script>
+	    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	    <link rel="stylesheet" type="text/css" href="css/panorama_viewer.css" />
+	    <link rel="stylesheet" type="text/css" href="css/elusive-webfont.css" />
+	    <script src="../file/js/modernizr.js"></script>
+	</head>
+	<body class="demo1">
+	<div class="header">
+		<h1>Panoramic Viewer: Instant Transition without Overlay</h1>
+	</div>
+
+
+	<div class="main">
+	  <div class="panorama">
+			<img src="img/realfab.jpg">
+	  </div>
+	</div>
+	<div class="Tp">
+		<img 
+	</div>
+	<script type="text/javascript">
+	$(window).load(function(){
+    $(".panorama").panorama_viewer({
+      animationTime: 0,
+      overlay: false,
+      repeat: true
+    });
+  });
+
+  </script>
+
+	</body>
+</html>

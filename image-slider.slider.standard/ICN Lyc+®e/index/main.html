@@ -1,0 +1,123 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Fabert 2018 </title>
+
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Most of the time, highly detailed panoramic photos are skewed down so that they fit the website layout, making it impossible to enjoy the photo" />
+		<meta name="keywords" content="jquery viewer, jquery panorama viewer, javascript panorama viewer" />
+		<meta name="author" content="Author for Onextrapixel" />
+		<link rel="shortcut icon" id="favicon" href="../file/favicon.gif">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<!-- Edit Below -->
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.panorama_viewer.js"></script>
+	  <link rel="stylesheet" type="text/css" href="css/style.css" />
+	  <link rel="stylesheet" type="text/css" href="css/panorama_viewer.css" />
+	  <link rel="stylesheet" type="text/css" href="css/elusive-webfont.css" />
+    <script src="../file/js/modernizr.js"></script>
+      
+
+  </head>
+
+  <body>
+    <h1>Le lycée Fabert, Metz 2018.</h1>
+    <h2>La Galerie: Que voulez-vous visiter ?</h1>
+    <div id="peinture">
+      <img src="imgUsefull/data/data1.jpg" id="dataGlob">
+      <!-- <div id="step">
+        <img src="footprintD.png" id="img1">
+        <img src="footprintG.png" id="img2">
+        <img src="footprintD.png" id="img3">
+        <img src="footprintG.png" id="img4">
+        <img src="footprintD.png" id="img5">
+        <img src="footprintG.png" id="img6">
+        <img src="footprintD.png" id="img7">
+        <img src="footprintG.png" id="img8">
+        <img src="footprintD.png" id="img9">
+        <img src="footprintG1.png" id="img10">
+        <img src="footprintD2.png" id="img11">
+        <img src="footprintG3.png" id="img12">
+        <img src="footprintD3.png" id="img13">
+        <img src="footprintG3.png" id="img14">
+        <img src="footprintD3.png" id="img15">
+        <img src="footprintG3.png" id="img16">
+        <img src="footprintD3.png" id="img17">
+        <img src="footprintG3.png" id="img18">
+        <img src="footprintD2.png" id="img19">
+        <img src="footprintG3.png" id="img20">
+        <img src="footprintD2.png" id="img21">
+        <img src="panneau.png" id="panneau" onclick="change()">
+      </div> -->
+    </div>
+    <h2>La carte: Découvrez les recoins du mythique Lycée Fabert !</h2>
+    <div id="googleMap"></div>
+    <script>
+      
+      function myMap() {
+        var mapProp= {
+            center:new google.maps.LatLng(49.12309, 6.17266),
+            zoom:18,
+            mapTypeId: 'satellite'
+        };
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+        var mAbbaye = new google.maps.Marker({
+          position: {lat: 49.12328, lng: 6.17233},
+          title:"Abbaye"
+        });
+
+        mAbbaye.setMap(map);
+        mAbbaye.addListener('click', function() {
+          location.replace("https://www.w3schools.com");
+        });
+
+        map.addListener('center_changed', function() {
+          // 1.5 seconds after the center of the map has changed, pan back to the
+          // marker.
+          window.setTimeout(function() {
+            map.panTo(mAbbaye.getPosition());
+          }, 1500);
+        });
+
+
+      }
+      
+      
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIu-PipBYZLGkh2-xFTY9YLNlW-FHpVD8&callback=myMap&language=fr"></script>
+
+      <div class="header">
+        <h2>Student View: Vue de l'intérieur du lycée en 360° !</h2>
+      </div>
+
+      <div class="main">
+        <div class="panorama">
+          <img src="img/realfab.jpg">
+        </div>
+      </div>
+      <div class="Tp">
+        <img 
+      </div>
+      <script type="text/javascript">
+      $(window).load(function(){
+        $(".panorama").panorama_viewer({
+          animationTime: 0,
+          overlay: false,
+          repeat: true
+        });
+      });
+    
+      </script>
+      
+  </body>
+</html>
+
+
+
